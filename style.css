@@ -9,6 +9,7 @@
 
 body{
     background-image: url(assets/bg.png);
+    background: linear-gradient(to bottom, none, rgb(188, 192, 66) 30%);
 }
 nav{
     display: flex;
@@ -190,8 +191,14 @@ button:hover{
     margin-left: 100px;
 }
 .back-icon{
+    background-color: orange;
     border: none;
-    background-color: transparent;
+    width: 20px;
+    height: 30px;
+    border-radius: 50%;
+    
+    font-size: 15px;
+    cursor: pointer;
     
 }
 .icon{
@@ -287,7 +294,7 @@ button:hover{
 .box{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width:-30px;
+    width:-100px;
 }
 .box-pic{
     width:100%;
@@ -339,162 +346,112 @@ button:hover{
     border-radius: 18px;
     position: relative;    
 }
-footer {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-top: 2px solid #ddd;
-    background-color: #01ACFD;
-}
-
-
-.foot-1,.foot-title {
-    max-width: 30%;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-   
-}
-.foot-discription{
-    margin-left: 20px;
-    color: #FFFFFF;
-    font-size: 20px;
-}
-
-.foot-1 img.foot-pic {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.foot-1 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.foot-1 p {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-}
-.foot-2 {
-    flex: 1;
-    max-width: 30%;
-    padding: 10px;
-    
-}
-
-.foot-2 h3 {
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.foot-2 ul {
-    list-style: none;
-    padding: 0;
-}
-
-.foot-2 ul li {
-    margin-bottom: 5px;
-}
-
-.foot-2 ul li a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-}
-
-.foot-2 ul li a:hover {
-    color: #FFFFFF;
-}
-.foot-3 {
-    flex: 1;
-    max-width: 30%;
-    padding: 10px;
-    text-align: center;
-}
-
-.foot-3 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.foot-3 ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.foot-3 ul li img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-
-}
-
-.foot-3 ul li img:hover {
-    transform: scale(1.2);
-}
-.foot-pic{
-    display: flex;
+.box-btn{
+    background-color: black;
+    color:white;
+    border-radius: 18px;
+    height: 40px;
+    width:150px;
+    font-size: 13px;
     align-items: center;
-    gap: 10px;
 }
-
-.foot-pic img {
-    width: 50px;
+.footer-container{
+    align-items: center;
+    background-color: #3CD8E8;
+    width: cover;
     height: auto;
-}
+    display: flex;
+    justify-content: space-around;
 
-.foot-pic h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #333;
 }
-.foot-center{
-    display: block;
-    
-   
+.footer-box-1{
+    margin-top: 4.125rem;
+    padding-left: 20px;
+    display: flex;
+
 }
-
-
-.foot-title{
-    font-size:42.14px ;
-    font-weight: bold;
-    
-    
+.footer-box-2{
+    margin-top: 2rem;
+    padding-right: 20px;
+    text-align:left;
+    padding-left: 20px;
 }
-.foot-2 {
-    padding: 20px;
-    flex: 1;
-    max-width: 30%;
-     
+.footer-box-3{
+    margin-top: 2rem;
+    text-align: left;
+    padding-left: 20px;
 }
-
-.foot-2 h3 {
-    font-size: 1.5rem;
-   
-    color: #fff; 
-    text-align: center; 
-
-.foot-center {
-    list-style: none;
-    text-align: center;
+.footer-text{
+    font-size:1rem;
+    padding-left: 20px;
 }
-
-.foot-center ul li {
-    margin-bottom: 10px;
-}
-
-.foot-center li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-}
-
+@media (max-width: 375px) {
+    body {
+      padding: 10px;
+    }
+  
+    .card-container {
+      flex-direction: column; /* Stack cards vertically */
+      gap: 20px;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .card-1, .card-2, .card-3 {
+      width: 100%; /* Full width */
+      max-width: 350px; /* Optional max-width for better readability */
+      margin: 0 auto;
+    }
+  
+    .box {
+      grid-template-columns: 1fr; /* Stack all boxes vertically */
+      gap: 20px;
+      width: 100%;
+    }
+  
+    .box > div {
+      width: 100%; /* Ensure full width */
+    }
+  
+    .box-pic {
+      width: 100%; /* Full width for the image */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px;
+    }
+  
+    nav {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .banner {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .banner-content {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .kids-png {
+      width: 100%;
+      height: auto;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+      padding: 20px;
+    }
+  
+    .footer-box-1, .footer-box-2, .footer-box-3 {
+      width: 100%;
+    }
+  }
+  
